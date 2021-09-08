@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/stylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<body>
+    <!-- header to start off page-->
+    <header class="jumbotron bg-primary text-white ">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <main class="container-fluid">
+        <!--row to search for cities-->
+        <nav class="col-md-2">
+            <h2>City Search: </h2>
+            <form class="card-body" id="city-form">
+                <div class="card">
+                    <input id="input-city" class="form-control" type="search" placeholder="Search">
+                    <button class="btn btn-secondary" type="submit" id="sumbit-city">submit</button>
+                </div>
+            </form>
+            <!-- save the past cities-->
+            <section class="">
+                <ul class="list-group list list-group-flush" id="saved-cities">
+                </ul>
+            </section>
+        </nav>
+
+        <!--current weather data-->
+
+        <div class="container-fluid">
+            <h3>Current Weather</h3>
+            <section class="card-body" id="current-city">
+                <h2 class="card-title" id="city"></h2>
+                <div class="car-body">
+                    <h5 id="date"></h5>
+                    <p id="temp"></p>
+                    <p id="humidity"></p>
+                    <p id="wind"></p>
+                    <p id="uv-index"></p>
+                </div>
+        </div>
+        </section>
+
+
+        <!--5 day forecast-->
+
+        <section class="row" id="forecast" style="display: contents;">
+            <div class="col-8">
+                <h3>weekly forecast</h3>
+                <div class="card-deck" id="weekly-div"></div>
+            </div>
+        </section>
+
+
+
+    </main>
+    <footer>
+        <div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="./assets/js/JS.js"></script>
+</body>
+
+</html>
